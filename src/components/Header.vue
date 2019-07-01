@@ -1,6 +1,6 @@
 <template>
   <v-toolbar fixed color="orange">
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-icon>home</v-icon>
     <v-toolbar-title class="text-white">Tuna's Blog</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
