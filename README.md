@@ -1,5 +1,3 @@
-# ssafy
-
 ## Project setup
 ```
 npm install
