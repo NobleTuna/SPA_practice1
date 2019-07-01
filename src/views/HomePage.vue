@@ -6,12 +6,12 @@
   <v-container>
     <!-- About Me -->
     <v-layout my-5>
-      <v-flex :style="{ 'text-align': aboutAlign}">
-        <h2 class="headline mb-3">About Me</h2>
-        <p class="mr-4">안녕하세요, SSAFY 참가자 여러분!<br />함께 프로젝트를 진행하게 되어서 기쁩니다. Vue는 어렵지 않습니다. 차근차근 하나씩 따라하다보면 어느새 멋진 블로그가
+      <v-flex>
+        <h2 class="headline mb-3 mobile">About Me</h2>
+        <p class="mr-4 mobile">안녕하세요, SSAFY 참가자 여러분!<br />함께 프로젝트를 진행하게 되어서 기쁩니다. Vue는 어렵지 않습니다. 차근차근 하나씩 따라하다보면 어느새 멋진 블로그가
           만들어져 있을겁니다! 모두 화이팅 하시고, 꼭 완성해서 좋은 평가 있길 바라겠습니다.</p>
       </v-flex>
-      <v-flex xs4 v-show="desktopSize">
+      <v-flex xs4 class="displayNon">
         <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" />
       </v-flex>
     </v-layout>
@@ -62,29 +62,24 @@ export default {
   },
   data: function() {
     return {
-      desktopSize: true,
-      aboutAlign: "left"
     }
   },
   mounted() {
-    this.sizeCheck();
   },
   methods: {
     getImgUrl(img) {
       console.log(img);
       return require('../assets/' + img)
-    },
-    sizeCheck() {
-      if (window.innerWidth < 600) {
-        this.desktopSize = false;
-        this.mobileForm();
-      } else {
-        this.desktopSize = true;
-      }
-    },
-    mobileForm() {
-      this.aboutAlign = "center";
     }
-  },
+  }
 }
 </script>
+<style>
+@media only screen and (max-device-width : 480px){
+.mobile {
+  text-align: center;
+}
+.displayNon{
+  display: none;
+}
+}</style>
