@@ -1,21 +1,29 @@
 <template>
-  <v-app>
-    <v-content>
-      <router-view/>
-    </v-content>
-  </v-app>
+<v-app>
+  <Header>
+  </Header>
+  <v-content>
+    <router-view />
+  </v-content>
+  <Footer></Footer>
+</v-app>
 </template>
-
 <script>
 import store from './store'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default {
-	name: 'App',
-	store,
-	data() {
-		return {
-			//
-		}
-	}
+  name: 'App',
+  components: {
+    Header,
+    Footer
+  },
+  store,
+  data() {
+    return {
+      //
+    }
+  }
 }
 </script>
