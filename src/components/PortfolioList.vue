@@ -22,7 +22,7 @@ export default {
 	name: 'PortfoliosList',
 	props: {
 		limits: {type: Number, default: 4},
-    loadMore: {type: Boolean, default: true}
+    loadMore: {type: Boolean, default: false}
 	},
 	data() {
 		return {
@@ -41,7 +41,7 @@ export default {
 
 		},
 		loadMorePortfolios() {
-      
+
     }
 	},
 }

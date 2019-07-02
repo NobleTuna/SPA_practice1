@@ -1,17 +1,22 @@
 <template>
-  <v-toolbar fixed color="orange">
-    <v-icon>home</v-icon>
-    <v-toolbar-title class="text-white">Tuna's Blog</v-toolbar-title>
-    <v-spacer></v-spacer>
-    <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat><span class="text-white">Post</span></v-btn>
-      <v-btn flat><span class="text-white">Portfolio</span></v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
+<v-toolbar fixed color="orange" dark scroll-off-screen scroll-target="#scrolling-techniques">
+  <v-toolbar-side-icon>
+    <v-icon>apps</v-icon>
+  </v-toolbar-side-icon>
+  <v-toolbar-title>Tuna's Blog</v-toolbar-title>
+
+  <v-spacer></v-spacer>
+
+  <v-btn icon>
+    <router-link to="/" tag="none">
+      <v-icon>home</v-icon>
+    </router-link>
+  </v-btn>
+</v-toolbar>
 </template>
 
 <style>
-  .text-white {
-    color : white;
-  }
+.text-white {
+  color: white;
+}
 </style>

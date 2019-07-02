@@ -19,9 +19,9 @@
     <!-- Portfolio -->
     <v-layout my-5>
       <v-flex xs12>
-        <router-link to="/portfolio">
-          <h2 class="headline my-5 text-xs-center">Portfolio</h2>
-        </router-link>
+        <h2 class="headline my-5 text-xs-center">
+          <v-btn flat large :to="{ name: 'portfolio', params: {} }" replace style="font-size:1.2em;text-transform:none;" slot="text">Portfolio</v-btn>
+        </h2>
         <PortfolioList></PortfolioList>
       </v-flex>
     </v-layout>

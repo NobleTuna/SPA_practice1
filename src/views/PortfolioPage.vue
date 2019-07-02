@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ImgBanner imgSrc="https://source.unsplash.com/5brvJbR1Pn8/1600x900">
+    <ImgBanner imgSrc="https://source.unsplash.com/random">
       <div style="line-height:1.2em;font-size:1.2em;" slot="text">Portfolio</div>
     </ImgBanner>
     <v-container>
@@ -9,6 +9,7 @@
       <v-layout>
         <v-flex xs12>
           <PortfolioList :limits="6" :load-more="true"></PortfolioList>
+          <h2 class="headline my-5 text-xs-center"><v-btn flat large :to="{ name: 'writePortfolio', params: {WritePortfolio} }" replace style="font-size:1.2em;text-transform:none;"slot="text">Write Portfolio</v-btn></h2>
         </v-flex>
       </v-layout>
 
