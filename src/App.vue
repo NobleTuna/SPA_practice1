@@ -1,5 +1,6 @@
 <template>
 <v-app>
+  <go-top></go-top>
   <Header>
   </Header>
   <v-content>
@@ -12,12 +13,14 @@
 import store from './store'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import GoTop from '@inotom/vue-go-top';
 
 export default {
   name: 'App',
   components: {
     Header,
-    Footer
+    Footer,
+    GoTop
   },
   store,
   data() {
