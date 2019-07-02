@@ -74,12 +74,6 @@ export default {
   }
 }
 </script>
+
 <style>
-@media only screen and (max-device-width : 480px){
-.mobile {
-  text-align: center;
-}
-.displayNon{
-  display: none;
-}
-}</style>
+</style>
