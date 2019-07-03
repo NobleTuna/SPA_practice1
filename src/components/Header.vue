@@ -107,6 +107,7 @@
 import $ from "jquery";
 
 export default {
+  name:'Header',
   components: {},
   data() {
     return {
