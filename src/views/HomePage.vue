@@ -19,7 +19,7 @@
     <v-layout my-5>
       <v-flex xs12>
         <h2 class="headline my-5 text-xs-center">
-          <v-btn flat large :to="{ name: 'portfolio', params: {} }" replace style="font-size:1.2em;text-transform:none;" slot="text">Portfolio</v-btn>
+          <v-btn color="warning" flat large to="portfolio" replace style="font-size:1.2em;text-transform:none;" slot="text">Portfolio</v-btn>
         </h2>
         <PortfolioList></PortfolioList>
       </v-flex>
@@ -28,7 +28,9 @@
     <!-- Post -->
     <v-layout my-5>
       <v-flex xs12>
-        <h2 class="headline my-5 text-xs-center">Post</h2>
+        <h2 class="headline my-5 text-xs-center">
+          <v-btn color="warning" flat large to="Post" replace style="font-size:1.2em;text-transform:none;" slot="text">Post</v-btn>
+        </h2>
         <PostList :column="2"></PostList>
       </v-flex>
     </v-layout>
@@ -37,7 +39,9 @@
     <!-- Github -->
     <v-layout my-5>
       <v-flex xs12>
-        <h2 class="headline my-5 text-xs-center">Project</h2>
+        <h2 class="headline my-5 text-xs-center">
+          <v-btn color="warning" flat large replace style="font-size:1.2em;text-transform:none;" slot="text">Project</v-btn>
+        </h2>
         <RepositoryList></RepositoryList>
       </v-flex>
     </v-layout>
