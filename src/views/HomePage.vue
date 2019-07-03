@@ -1,7 +1,7 @@
 <template>
 <div>
   <ImgBanner imgSrc="https://source.unsplash.com/random">
-    <div style="line-height:1.2em;" slot="text">자기 개발을 멈추면 죽는다.</div>
+    <div style="line-height:1.2em;" slot="text">자기 개발을 멈추면 죽는다</div>
   </ImgBanner>
   <v-container>
     <!-- About Me -->
