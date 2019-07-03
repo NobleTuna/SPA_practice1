@@ -29,7 +29,7 @@
             </v-container>
           </v-flex>
           <v-flex px10 py10>
-            <v-btn color="warning" dark @click.stop="submit()">제출</v-btn>
+            <v-btn color="warning" dark @click.stop="submit()">Submit</v-btn>
           </v-flex>
         </v-container>
       </v-form>

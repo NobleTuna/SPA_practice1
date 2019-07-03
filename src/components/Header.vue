@@ -1,7 +1,7 @@
 <template>
 <v-container>
   <v-toolbar fixed color="orange" dark scroll-off-screen scroll-target="#scrolling-techniques">
-    <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up">
+    <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-md-and-up">
       <v-icon>list</v-icon>
     </v-toolbar-side-icon>
 
@@ -9,22 +9,26 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon class="hidden-xs-only">
+    <v-btn icon class="hidden-sm-only">
       <router-link to="post" tag="none">
         <v-icon>fa-edit</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-xs-only">
+    <v-btn icon class="hidden-sm-only">
       <router-link to="portfolio" tag="none">
         <v-icon>folder_open</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-xs-only">
+    <v-btn icon class="hidden-sm-only">
       <router-link to="login" tag="none">
         <v-icon>account_circle</v-icon>
       </router-link>
+    </v-btn>
+
+    <v-btn icon>
+      <v-icon id="favorite">bookmark</v-icon>
     </v-btn>
 
     <v-btn icon>
@@ -97,8 +101,13 @@
 }
 </style>
 
+<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
 <script>
+import $ from "jquery";
+
 export default {
+  components: {},
   data() {
     return {
       drawer: null,
@@ -106,4 +115,30 @@ export default {
     }
   }
 }
+
+$(document).ready(function() {
+  $('#favorite').on('click', function(e) {
+    var bookmarkURL = window.location.href;
+    var bookmarkTitle = document.title;
+    var triggerDefault = false;
+    if (window.sidebar && window.sidebar
+      .addPanel) { // Firefox version < 23
+      window.sidebar.addPanel(bookmarkTitle, bookmarkURL, '');
+    } else if ((window.sidebar && (navigator.userAgent.toLowerCase().indexOf('firefox') > -1)) || (window.opera && window
+        .print)) { // Firefox version >= 23 and Opera Hotlist
+      var $this = $(this);
+      $this.attr('href', bookmarkURL);
+      $this.attr('title', bookmarkTitle);
+      $this.attr('rel', 'sidebar');
+      $this.off(e);
+      triggerDefault = true;
+    } else if (window.external && ('AddFavorite' in window
+        .external)) { // IE Favorite
+      window.external.AddFavorite(bookmarkURL, bookmarkTitle);
+    } else { // WebKit - Safari/Chrome
+      alert((navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Cmd' : 'Ctrl') + '+D 키를 눌러 즐겨찾기에 등록하실 수 있습니다.');
+    }
+    return triggerDefault;
+  });
+});
 </script>
