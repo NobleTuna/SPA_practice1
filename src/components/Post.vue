@@ -3,9 +3,7 @@
   <v-flex row>
     <div class="caption">{{formatedDate}}</div>
     <h2 class="color-333 headline font-weight-light title_overflow">{{title}}</h2>
-    <p class="mb-1 color-666 font-weight-light subheading body_overflow">
-
-      {{body}}</p>
+    <p class="mb-1 color-666 font-weight-light subheading body_overflow">{{body}}</p>
   </v-flex>
 </v-layout>
 </template>

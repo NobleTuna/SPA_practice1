@@ -19,6 +19,7 @@
 <script>
 import ImgBanner from '../components/ImgBanner'
 import WritePortfolio from '../components/WritePortfolio'
+
 export default {
   name: 'PortfolioPage',
   components: {

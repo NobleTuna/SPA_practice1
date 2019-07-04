@@ -11,21 +11,9 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon class="hidden-sm-and-down" title="Post">
-      <router-link to="post" tag="span">
-        <v-icon>receipt</v-icon>
-      </router-link>
-    </v-btn>
-
-    <v-btn icon class="hidden-sm-and-down" title="Portfolio">
-      <router-link to="portfolio" tag="span">
-        <v-icon>folder_open</v-icon>
-      </router-link>
-    </v-btn>
-
-    <v-btn icon class="hidden-sm-and-down" title="Login">
-      <router-link to="login" tag="span">
-        <v-icon>account_circle</v-icon>
+    <v-btn v-for="item in items" icon class="hidden-sm-and-down" :title="item.title">
+      <router-link :to="item.router" tag="span">
+        <v-icon>{{item.icon}}</v-icon>
       </router-link>
     </v-btn>
 
@@ -56,34 +44,13 @@
 
     <v-list class="pt-0" dense>
       <v-divider></v-divider>
-      <router-link to="post" class="hover-effect" tag="span">
-        <v-list-tile>
-          <!-- <v-list-tile v-for="item in items" :key="item.title" @click=""> -->
-          <v-list-tile-action>
-            <v-icon>receipt</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Post</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </router-link>
-      <router-link to="portfolio" class="hover-effect" tag="span">
+      <router-link v-for="item in items" :to="item.router" class="hover-effect" tag="span">
         <v-list-tile>
           <v-list-tile-action>
-            <v-icon>folder_open</v-icon>
+            <v-icon>{{item.icon}}</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            <v-list-tile-title>Portfolio</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-      </router-link>
-      <router-link to="login" class="hover-effect" tag="span">
-        <v-list-tile>
-          <v-list-tile-action>
-            <v-icon>account_circle</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>Login</v-list-tile-title>
+            <v-list-tile-title>{{item.title}}</v-list-tile-title>
           </v-list-tile-content>
         </v-list-tile>
       </router-link>
@@ -111,7 +78,22 @@ export default {
   data() {
     return {
       drawer: null,
-      items: [{}]
+      items: [{
+          title: 'Post',
+          icon: 'receipt',
+          router: 'post'
+        },
+        {
+          title: 'Portfolio',
+          icon: 'folder_open',
+          router: 'portfolio'
+        },
+        {
+          title: 'Login',
+          icon: 'account_circle',
+          router: 'login'
+        }
+      ]
     }
   },
   methods: {

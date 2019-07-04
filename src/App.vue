@@ -1,8 +1,7 @@
 <template>
 <v-app>
   <go-top></go-top>
-  <Header>
-  </Header>
+  <Header></Header>
   <Alert></Alert>
   <v-content>
     <router-view />
@@ -10,6 +9,7 @@
   <Footer></Footer>
 </v-app>
 </template>
+
 <script>
 import store from './store'
 import Header from './components/Header'

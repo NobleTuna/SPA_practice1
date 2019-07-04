@@ -11,6 +11,7 @@
   </v-flex>
 </v-layout>
 </template>
+
 <script>
 import Post from '@/components/Post'
 import FirebaseService from '@/services/FirebaseService'
