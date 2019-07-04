@@ -102,12 +102,13 @@
 </style>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js">
-  </script>
+</script>
+
 <script>
 import $ from "jquery";
 
 export default {
-  name:'Header',
+  name: 'Header',
   components: {},
   data() {
     return {
