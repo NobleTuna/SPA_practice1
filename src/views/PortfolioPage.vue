@@ -9,7 +9,6 @@
       <v-layout>
         <v-flex xs12>
           <PortfolioList :limits="6" :load-more="true"></PortfolioList>
-          <h2 class="headline my-5 text-xs-center"><v-btn color="warning" flat large to="writePortfolio" replace style="font-size:1.2em;text-transform:none;"slot="text">Write Portfolio</v-btn></h2>
         </v-flex>
       </v-layout>
 
