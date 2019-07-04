@@ -5,33 +5,35 @@
       <v-icon>list</v-icon>
     </v-toolbar-side-icon>
 
-    <v-toolbar-title>Tuna's Blog</v-toolbar-title>
+    <router-link to="/" tag="span" style="cursor:pointer" title="home">
+      <v-toolbar-title>Tuna's Blog</v-toolbar-title>
+    </router-link>
 
     <v-spacer></v-spacer>
 
-    <v-btn icon class="hidden-sm-only">
+    <v-btn icon class="hidden-sm-only" title="Post">
       <router-link to="post" tag="span">
         <v-icon>receipt</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-sm-only">
+    <v-btn icon class="hidden-sm-only" title="Portfolio">
       <router-link to="portfolio" tag="span">
         <v-icon>folder_open</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-sm-only" x>
+    <v-btn icon class="hidden-sm-only" title="Login">
       <router-link to="login" tag="span">
         <v-icon>account_circle</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon title="Bookmark">
       <v-icon @click="favorite">bookmark</v-icon>
     </v-btn>
 
-    <v-btn icon>
+    <v-btn icon title="home">
       <router-link to="/" tag="span">
         <v-icon>home</v-icon>
       </router-link>
