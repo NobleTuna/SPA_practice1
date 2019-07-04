@@ -11,19 +11,19 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn icon class="hidden-sm-only" title="Post">
+    <v-btn icon class="hidden-sm-and-down" title="Post">
       <router-link to="post" tag="span">
         <v-icon>receipt</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-sm-only" title="Portfolio">
+    <v-btn icon class="hidden-sm-and-down" title="Portfolio">
       <router-link to="portfolio" tag="span">
         <v-icon>folder_open</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-sm-only" title="Login">
+    <v-btn icon class="hidden-sm-and-down" title="Login">
       <router-link to="login" tag="span">
         <v-icon>account_circle</v-icon>
       </router-link>
