@@ -10,19 +10,19 @@
     <v-spacer></v-spacer>
 
     <v-btn icon class="hidden-sm-only">
-      <router-link to="post" tag="none">
+      <router-link to="post" tag="span">
         <v-icon>fa-edit</v-icon>
       </router-link>
     </v-btn>
 
     <v-btn icon class="hidden-sm-only">
-      <router-link to="portfolio" tag="none">
+      <router-link to="portfolio" tag="span">
         <v-icon>folder_open</v-icon>
       </router-link>
     </v-btn>
 
-    <v-btn icon class="hidden-sm-only">
-      <router-link to="login" tag="none">
+    <v-btn icon class="hidden-sm-only" x>
+      <router-link to="login" tag="span">
         <v-icon>account_circle</v-icon>
       </router-link>
     </v-btn>
@@ -32,7 +32,7 @@
     </v-btn>
 
     <v-btn icon>
-      <router-link to="/" tag="none">
+      <router-link to="/" tag="span">
         <v-icon>home</v-icon>
       </router-link>
     </v-btn>
@@ -54,7 +54,7 @@
 
     <v-list class="pt-0" dense>
       <v-divider></v-divider>
-      <router-link to="post" tag="none" class="hover-effect">
+      <router-link to="post"  class="hover-effect" tag="span">
         <v-list-tile>
           <!-- <v-list-tile v-for="item in items" :key="item.title" @click=""> -->
           <v-list-tile-action>
@@ -65,7 +65,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </router-link>
-      <router-link to="portfolio" tag="none" class="hover-effect">
+      <router-link to="portfolio"  class="hover-effect" tag="span">
         <v-list-tile>
           <v-list-tile-action>
             <v-icon>folder_open</v-icon>
@@ -75,7 +75,7 @@
           </v-list-tile-content>
         </v-list-tile>
       </router-link>
-      <router-link to="login" tag="none" class="hover-effect">
+      <router-link to="login" class="hover-effect" tag="span">
         <v-list-tile>
           <v-list-tile-action>
             <v-icon>account_circle</v-icon>

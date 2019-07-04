@@ -6,36 +6,44 @@ import PortfolioPage from './views/PortfolioPage.vue'
 import LoginPage from './views/LoginPage.vue'
 import WritePortfolio from './views/WritePortfolioPage.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
+  components: {
+    vue:Vue,
+    router:Router,
+    home:HomePage,
+    post:PostPage,
+    portfolio:PortfolioPage,
+    login:LoginPage,
+    writePortfolio:WritePortfolio
+  },
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [
-		{
-			path: '/',
-			name: 'home',
-			component: HomePage
-		},
-		{
-			path: '/post',
-			name: 'post',
-			component: PostPage
-		},
-		{
-			path: '/portfolio',
-			name: 'portfolio',
-			component: PortfolioPage
-		},
-		{
-			path: '/login',
-			name: 'login',
-			component: LoginPage
-		},
+  routes: [{
+      path: '/',
+      name: 'home',
+      component: HomePage
+    },
+    {
+      path: '/post',
+      name: 'post',
+      component: PostPage
+    },
+    {
+      path: '/portfolio',
+      name: 'portfolio',
+      component: PortfolioPage
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginPage
+    },
     {
       path: '/writePortfolio',
       name: 'writePortfolio',
-      component : WritePortfolio
+      component: WritePortfolio
     }
   ]
 })

@@ -17,13 +17,14 @@ import Footer from './components/Footer'
 import GoTop from '@inotom/vue-go-top';
 import Alert from './components/BrowserAlert'
 
+
 export default {
   name: 'App',
   components: {
-    Header,
-    Footer,
-    GoTop,
-    Alert
+    Header: Header,
+    Footer: Footer,
+    GoTop: GoTop,
+    Alert: Alert,
   },
   store,
   data() {
