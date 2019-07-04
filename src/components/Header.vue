@@ -11,7 +11,7 @@
 
     <v-btn icon class="hidden-sm-only">
       <router-link to="post" tag="span">
-        <v-icon>fa-edit</v-icon>
+        <v-icon>receipt</v-icon>
       </router-link>
     </v-btn>
 
@@ -58,7 +58,7 @@
         <v-list-tile>
           <!-- <v-list-tile v-for="item in items" :key="item.title" @click=""> -->
           <v-list-tile-action>
-            <v-icon>fa-edit</v-icon>
+            <v-icon>receipt</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Post</v-list-tile-title>
