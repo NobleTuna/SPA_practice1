@@ -46,6 +46,9 @@ npm run build
 #### 브라우저 체크
 ![브라우저 체크](./src/readmeImg/browserCheck.gif)
 
+#### 스크롤 애니메이션 (추가)
+![스크롤 애니메이션](./src/readmeImg/scrollAnimation.gif)
+
 
 ## TODO
 - [unsplash random link](https://source.unsplash.com/)에서 이미지를 가져오는게 느리고 이미지에 따라 메인 글자가 잘 보이지 않는 문제 해결
