@@ -12,7 +12,7 @@
         <p class="mr-4 mobile_center">개발자(예정)인 위영웅입니다.</p>
       </v-flex>
       <v-flex xs4 class="hidden-sm-and-down">
-        <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" />
+        <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" class="borderImg" />
       </v-flex>
     </v-layout>
 
@@ -82,5 +82,10 @@ export default {
   .mobile_center {
     text-align: center;
   }
+}
+
+.borderImg {
+  border-radius: 100px;
+  box-shadow: 5px 5px 20px 5px gray;
 }
 </style>
