@@ -1,23 +1,14 @@
 <template>
 <div>
-  <ImgBanner imgSrc="https://source.unsplash.com/random">
+  <ImgBanner imgSrc="https://source.unsplash.com/random" data-aos="fade-down">
     <div style="line-height:1.2em; font-size:8vw;" slot="text">자기 개발을 멈추면 죽는다</div>
   </ImgBanner>
   <v-container>
 
-    <!-- About Me -->
-    <v-layout my-5>
-      <v-flex>
-        <h2 class="headline mb-3 mobile_center">About Me</h2>
-        <p class="mr-4 mobile_center">개발자(예정)인 위영웅입니다.</p>
-      </v-flex>
-      <v-flex xs4 class="hidden-sm-and-down">
-        <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" class="borderImg" />
-      </v-flex>
-    </v-layout>
+    <AboutMe data-aos="fade-right"></AboutMe>
 
     <!-- Portfolio -->
-    <v-layout my-5>
+    <v-layout my-5 data-aos="fade-left">
       <v-flex xs12>
         <h2 class="headline my-5 text-xs-center">
           <v-btn color="warning" flat large to="portfolio" replace style="font-size:1.2em;text-transform:none;" slot="text">Portfolio</v-btn>
@@ -27,7 +18,7 @@
     </v-layout>
 
     <!-- Post -->
-    <v-layout my-5>
+    <v-layout my-5 data-aos="fade-right">
       <v-flex xs12>
         <h2 class="headline my-5 text-xs-center">
           <v-btn color="warning" flat large to="Post" replace style="font-size:1.2em;text-transform:none;" slot="text">Post</v-btn>
@@ -37,7 +28,7 @@
     </v-layout>
 
     <!-- Github -->
-    <v-layout my-5>
+    <v-layout my-5 data-aos="fade-left">
       <v-flex xs12>
         <h2 class="headline my-5 text-xs-center">
           <v-btn color="warning" flat large replace style="font-size:1.2em;text-transform:none;" slot="text">Project</v-btn>
@@ -54,12 +45,42 @@ import ImgBanner from '../components/ImgBanner'
 import PortfolioList from '../components/PortfolioList'
 import PostList from '../components/PostList'
 import RepositoryList from '../components/RepositoryList'
+import AboutMe from '../components/AboutMe'
 
 var filter = "win16|win32|win64|mac|macintel";
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
+AOS.init({
+  // Global settings:
+  disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+  initClassName: 'aos-init', // class applied after initialization
+  animatedClassName: 'aos-animate', // class applied on animation
+  useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+  disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+  debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+  throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 400, // values from 0 to 3000, with step 50ms
+  easing: 'ease', // default easing for AOS animations
+  once: true, // whether animation should happen only once - while scrolling down
+  mirror: false, // whether elements should animate out while scrolling past them
+  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+});
+
 
 export default {
   name: 'HomePage',
   components: {
+    AboutMe,
     ImgBanner,
     PortfolioList,
     PostList,
@@ -69,11 +90,6 @@ export default {
     return {}
   },
   mounted() {},
-  methods: {
-    getImgUrl(img) {
-      return require('../assets/' + img)
-    }
-  }
 }
 </script>
 

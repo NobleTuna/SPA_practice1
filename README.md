@@ -30,6 +30,7 @@ npm run build
 
 - ## [Markdown Editor](https://www.npmjs.com/package/v-markdown-editor)
 
+- ## [Animate on scroll library](https://github.com/michalsnik/aos)
 
 ## 실행 화면
 
