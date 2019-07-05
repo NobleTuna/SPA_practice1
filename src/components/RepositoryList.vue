@@ -1,6 +1,6 @@
 <template>
   <v-layout column px-4>
-    <v-flex v-for="i in repositories.length > limits ? limits : repositories.length">
+    <v-flex v-for="i in repositories.length > limits ? limits : repositories.length" :key="i">
       <v-divider v-if="i === 1"></v-divider>
       <Repository :repos="repositories[i - 1]"></Repository>
       <v-divider></v-divider>
@@ -35,9 +35,10 @@ export default {
 			if(response.status !== 200) {
 				return
 			}
-
 			this.repositories = response.data
 		}
 	}
 }
 </script>
+
+<style></style>

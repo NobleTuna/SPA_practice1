@@ -10,13 +10,13 @@ Vue.use(Router);
 
 export default new Router({
   components: {
-    vue:Vue,
-    router:Router,
-    home:HomePage,
-    post:PostPage,
-    portfolio:PortfolioPage,
-    login:LoginPage,
-    writePortfolio:WritePortfolio
+    Vue,
+    Router,
+    HomePage,
+    PostPage,
+    PortfolioPage,
+    LoginPage,
+    WritePortfolio
   },
   mode: 'history',
   base: process.env.BASE_URL,

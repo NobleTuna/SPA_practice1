@@ -1,12 +1,12 @@
 <template>
 <v-app>
-  <go-top></go-top>
-  <Header></Header>
-  <Alert></Alert>
+  <go-top />
+  <Header />
+  <Alert />
   <v-content>
     <router-view />
   </v-content>
-  <Footer></Footer>
+  <Footer />
 </v-app>
 </template>
 
@@ -17,20 +17,19 @@ import Footer from './components/Footer'
 import GoTop from '@inotom/vue-go-top';
 import Alert from './components/BrowserAlert'
 
-
 export default {
   name: 'App',
   components: {
-    Header: Header,
-    Footer: Footer,
-    GoTop: GoTop,
-    Alert: Alert,
+    Header,
+    Footer,
+    GoTop,
+    Alert,
   },
   store,
   data() {
-    return {
-      //
-    }
+    return {}
   }
 }
 </script>
+
+<style></style>

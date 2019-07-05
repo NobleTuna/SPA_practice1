@@ -4,13 +4,14 @@
     <div style="line-height:1.2em; font-size:8vw;" slot="text">자기 개발을 멈추면 죽는다</div>
   </ImgBanner>
   <v-container>
+
     <!-- About Me -->
     <v-layout my-5>
       <v-flex>
         <h2 class="headline mb-3 mobile_center">About Me</h2>
         <p class="mr-4 mobile_center">개발자(예정)인 위영웅입니다.</p>
       </v-flex>
-      <v-flex xs4 class="displayNon">
+      <v-flex xs4 class="hidden-sm-and-down">
         <v-img :src="getImgUrl('profile.png')" aspect-ratio="1.5" />
       </v-flex>
     </v-layout>
@@ -34,7 +35,6 @@
         <PostList :column="2"></PostList>
       </v-flex>
     </v-layout>
-
 
     <!-- Github -->
     <v-layout my-5>
@@ -71,7 +71,6 @@ export default {
   mounted() {},
   methods: {
     getImgUrl(img) {
-      console.log(img);
       return require('../assets/' + img)
     }
   }
@@ -79,4 +78,9 @@ export default {
 </script>
 
 <style>
+@media (max-width:960px) {
+  .mobile_center {
+    text-align: center;
+  }
+}
 </style>

@@ -83,9 +83,6 @@ export default {
         this.imageFile = ''
         this.imageUrl = ''
       }
-      // console.log("imgfile :" + this.imageFile);
-      // console.log("imgurl : " + this.imageUrl);
-      // console.log("imgName : " + this.imageName);
     },
 
     reset() {
@@ -104,7 +101,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

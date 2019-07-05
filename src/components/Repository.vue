@@ -36,6 +36,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .title_overflow {
   overflow: hidden;

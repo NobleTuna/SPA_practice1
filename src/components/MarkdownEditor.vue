@@ -8,16 +8,19 @@
 import 'v-markdown-editor/dist/index.css';
 import Vue from 'vue'
 import Editor from 'v-markdown-editor'
+
 export default {
   data() {
     return {
-      body:'내용을 마크다운 형식으로 작성해주세요!'
+      body: '내용을 마크다운 형식으로 작성해주세요!'
     }
   },
   methods: {
-    postMsg(){
-      this.$emit('sendBody',this.body);
+    postMsg() {
+      this.$emit('sendBody', this.body);
     }
   }
 }
 </script>
+
+<style></style>

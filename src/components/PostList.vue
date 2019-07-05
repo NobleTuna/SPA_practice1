@@ -1,6 +1,6 @@
 <template>
 <v-layout row wrap mw-700>
-  <v-flex v-for="i in posts.length > count ? count : posts.length" :class="'xs' + 12 / column" px-3>
+  <v-flex v-for="i in posts.length > count ? count : posts.length" :class="'xs' + 12 / column" px-3 :key="i">
     <Post :date="posts[i - 1].created_at" :title="posts[i - 1].title" :body="posts[i - 1].body"></Post>
     <v-divider></v-divider>
   </v-flex>
@@ -54,6 +54,7 @@ export default {
   }
 }
 </script>
+
 <style>
 .mw-700 {
   max-width: 700px;

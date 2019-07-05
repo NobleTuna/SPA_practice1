@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'alert',
+  name: 'Alert',
   data() {
     return {
       alert: false,
@@ -27,3 +27,5 @@ export default {
   }
 }
 </script>
+
+<style></style>

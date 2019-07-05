@@ -13,27 +13,6 @@
 </v-card>
 </template>
 
-<style>
-
-.title_overflow {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  -ms-text-overflow: ellipsis;
-  -moz-text-overflow: ellipsis
-}
-
-.body_overflow {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  word-wrap: break-word;
-}
-</style>
-
 <script>
 export default {
   name: 'Portfolio',
@@ -53,8 +32,27 @@ export default {
   },
   data() {
     return {
-      //
     }
   }
 }
 </script>
+
+<style>
+.title_overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis
+}
+
+.body_overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+</style>

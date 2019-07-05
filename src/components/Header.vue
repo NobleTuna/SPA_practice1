@@ -26,7 +26,6 @@
         <v-icon>home</v-icon>
       </router-link>
     </v-btn>
-
   </v-toolbar>
 
   <v-navigation-drawer v-model="drawer" fixed temporary>
@@ -58,18 +57,6 @@
   </v-navigation-drawer>
 </v-container>
 </template>
-
-<style>
-.text-white {
-  color: white;
-}
-
-.hover-effect:hover {
-  cursor: pointer;
-  color: orange;
-}
-</style>
-
 
 <script>
 export default {
@@ -123,3 +110,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.text-white {
+  color: white;
+}
+
+.hover-effect:hover {
+  cursor: pointer;
+  color: orange;
+}
+</style>
