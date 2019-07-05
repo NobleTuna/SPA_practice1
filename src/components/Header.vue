@@ -11,7 +11,7 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn v-for="item in items" icon class="hidden-sm-and-down" :title="item.title">
+    <v-btn v-for="item in items" icon class="hidden-sm-and-down" :title="item.title" :key="item.title">
       <router-link :to="item.router" tag="span">
         <v-icon>{{item.icon}}</v-icon>
       </router-link>
@@ -44,7 +44,7 @@
 
     <v-list class="pt-0" dense>
       <v-divider></v-divider>
-      <router-link v-for="item in items" :to="item.router" class="hover-effect" tag="span">
+      <router-link v-for="item in items" :key="item.title" :to="item.router" class="hover-effect" tag="span">
         <v-list-tile>
           <v-list-tile-action>
             <v-icon>{{item.icon}}</v-icon>
